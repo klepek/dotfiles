@@ -59,6 +59,7 @@ if [ $(uname) == "Darwin" ]
 				# command line interface for Mac App Store
 				brew install mas
 
+        brew install reattach-to-user-namespace # tmux copy to macos clipboard
   fi
 
 # Install some other useful utilities like `sponge`.
@@ -152,6 +153,17 @@ brew install entr
 # some build tools (required for YouCompleteMe for example)
 brew install cmake
 brew install go
+
+brew install dnscrypt-proxy
+
+brew install fpp
+
+cat << EOF
+
+For setup instructions for dnscrypt-proxy (encrypted DNS requests) read:
+https://juraj.bednar.io/blog/2018/04/02/more-privacy-with-dnscrypt/
+
+EOF
 
 # Remove outdated versions from the cellar.
 brew cleanup

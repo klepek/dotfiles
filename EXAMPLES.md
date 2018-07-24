@@ -42,18 +42,6 @@ Easier navigation: `..`, `...`, `....`, `.....`, `~` and `-`
 
 **Shortcuts**
 
-`h` history
-```
-/tmp/dotfiles/dir1/dir11/dir111$ h
-  235  2017-01-04 16:21:41 ~
-  236  2017-01-04 16:22:03 --
-  237  2017-01-04 16:22:18 -
-  238  2017-01-04 16:22:31 cd dir1/dir11/dir111/
-  239  2017-01-04 16:22:42 ...
-  240  2017-01-04 16:22:44 -
-  241  2017-01-04 16:39:13 h
-```
-
 `g` git
 ```
 usage: git [--version] [--help] [-C <path>] [-c name=value]
@@ -61,13 +49,6 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
            [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
            <command> [<args>]
-```
-
-`j` jobs
-```
-/tmp/dotfiles/dir1/dir11/dir111$ j
-[1]+  Stopped                 top
-/tmp/dotfiles/dir1/dir11/dir111$
 ```
 
 `lessf` alternative to `tail -f`
@@ -117,7 +98,7 @@ drwxr-xr-x 3 root root 4096 Jan  4 16:03 dir3/
 01
 ```
 
-`times` Stopwatch
+`timer` Stopwatch
 ```
 /tmp/dotfiles$ timer
 Timer started. Stop with Ctrl-D.
@@ -198,21 +179,6 @@ fe80::a00:27ff:fedf:ed97
 ```
 
 `reload` Reload the shell (i.e. invoke as a login shell)
-
-`p` See if my connection works (ping google dns)
-```
-/tmp/dotfiles$ p
-PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=78.3 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=38.3 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=63 time=38.6 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=63 time=82.7 ms
-64 bytes from 8.8.8.8: icmp_seq=5 ttl=63 time=411 ms
-^C
---- 8.8.8.8 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 4008ms
-rtt min/avg/max/mdev = 38.366/129.845/411.080/141.874 ms
-```
 
 `path` Print each PATH entry on a separate line
 ```
@@ -315,7 +281,20 @@ github.com.     354 IN NS ns-520.awsdns-01.net.
 U+1F343
 ```
 
-
+`p` See if my connection works (ping cloudflare dns)
+```
+/tmp/dotfiles$ p
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=63 time=78.3 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=63 time=38.3 ms
+64 bytes from 1.1.1.1: icmp_seq=3 ttl=63 time=38.6 ms
+64 bytes from 1.1.1.1: icmp_seq=4 ttl=63 time=82.7 ms
+64 bytes from 1.1.1.1: icmp_seq=5 ttl=63 time=411 ms
+^C
+--- 1.1.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4008ms
+rtt min/avg/max/mdev = 38.366/129.845/411.080/141.874 ms
+```
 
 `getcertnames` Show all the names (CNs and SANs) listed in the SSL certificate for a given domain
 ```
@@ -419,4 +398,38 @@ Weather for City: Berlin, Germany
 
 Check new Feature: wttr.in/Moon or wttr.in/Moon@2016-Mar-23 to see the phase of the Moon
 Follow @igor_chubin for wttr.in updates
+```
+
+`cr` Check the cryptos =]
+```
+Market Cap: €347,013,383,410 =
+24h Vol: €25,012,283,230 =
+BTC Dominance: 37.2% =
+┌──────┬───────┬─────────────┬──────────────┬─────────────┬──────────────────┬──────────────┐
+│ Rank │ Coin  │ Price (EUR) │ Change (24H) │ Change (1H) │ Market Cap (EUR) │ Spark (1H)   │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 1    │ BTC   │ 7594.63     │ -2.02%       │ -0.75%      │ 129.170B         │ ▁▅▇▁▁▁▂▂▂▂▇▅ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 2    │ ETH   │ 550.494     │ -2.81%       │ -0.87%      │ 54.582B          │ ▁▂▇▁▁▁▂▁▂▁▇▃ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 3    │ XRP   │ 0.687115    │ -4.53%       │ -0.99%      │ 26.898B          │ ▂▅▁▁▁▁▁▂▃▇▃▁ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 4    │ BCH   │ 1106.88     │ -7.03%       │ -1.27%      │ 18.931B          │ ▁▃▃▁▁▂▂▇▂▇▇▃ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 5    │ EOS   │ 14.1268     │ -18.59%      │ -1.34%      │ 11.681B          │ ▃▅▃▁▁▂▁▃▂▇▁▅ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 6    │ ADA   │ 0.278649    │ -8.18%       │ -0.92%      │ 7.225B           │ ▁▇▁▂▁▁▁▁▅▇▂▂ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 7    │ LTC   │ 122.566     │ -3.04%       │ -0.66%      │ 6.904B           │ ▂▂▁▁▂▁▁▁▁▃▇▁ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 8    │ XLM   │ 0.344987    │ -8.05%       │ -1.58%      │ 6.407B           │ ▂▃▇▁▂▁▃▁▅▅▇▅ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 9    │ TRX   │ 0.0768584   │ 6.33%        │ -1.85%      │ 5.053B           │ ▃▇▂▁▃▁▂▁▃▅▁▇ │
+├──────┼───────┼─────────────┼──────────────┼─────────────┼──────────────────┼──────────────┤
+│ 10   │ MIOTA │ 1.62017     │ -3.40%       │ -0.88%      │ 4.503B           │ ▁▇▁▃▂▃▁▃▁▁▇▂ │
+└──────┴───────┴─────────────┴──────────────┴─────────────┴──────────────────┴──────────────┘
+2018-04-30 23:01:37.679112 UTC
+
+NEW FEATURE: to see cryptocurrency exchange rate, do curl rate.sx/eth (or any other coin insted of ETH)
+[Follow @igor_chubin for rate.sx updates] [github.com/chubin/rate.sx]
 ```
