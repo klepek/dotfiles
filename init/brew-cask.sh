@@ -11,18 +11,18 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew install caskroom/cask/brew-cask
 
 
-brew cask install alfred
+#brew cask install alfred
 brew cask install flux
 brew cask install iterm2
 brew cask install torbrowser
-brew cask install onionshare
-ln -s /Applications/OnionShare.app/Contents/MacOS/onionshare ~/.bin/
+#brew cask install onionshare
+#ln -s /Applications/OnionShare.app/Contents/MacOS/onionshare ~/.bin/
 brew cask install vlc
 brew cask install spectacle
 brew cask install disk-inventory-x
-brew cask install licecap
+#brew cask install licecap
 brew cask install appcleaner
-brew cask install handbrake
+#brew cask install handbrake
 brew cask install the-unarchiver
 brew cask install java
 brew cask install mark-text
@@ -45,4 +45,4 @@ brew cask install font-inconsolata
 brew cask install font-fira-code
 brew cask install font-hack
 
-brew cask install webtorrent
+#brew cask install webtorrent
