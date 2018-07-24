@@ -121,7 +121,7 @@ brew install selecta
 brew install tmux
 brew install gnupg
 brew install gpgme
-brew install detox
+#brew install detox
 
 # Install password generator
 brew install apg
@@ -154,16 +154,16 @@ brew install entr
 brew install cmake
 brew install go
 
-brew install dnscrypt-proxy
+#brew install dnscrypt-proxy
 
-brew install fpp
+#brew install fpp
 
-cat << EOF
+#cat << EOF
 
-For setup instructions for dnscrypt-proxy (encrypted DNS requests) read:
-https://juraj.bednar.io/blog/2018/04/02/more-privacy-with-dnscrypt/
+#For setup instructions for dnscrypt-proxy (encrypted DNS requests) read:
+#https://juraj.bednar.io/blog/2018/04/02/more-privacy-with-dnscrypt/
 
-EOF
+#EOF
 
 # Remove outdated versions from the cellar.
 brew cleanup
